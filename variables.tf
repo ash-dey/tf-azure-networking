@@ -43,7 +43,7 @@ variable "dns_servers" {
 variable "subnet_names" {
   description = "A list of public subnets inside the vNet."
   type        = list(string)
-  #  default     = ["subnet1", "subnet2", "subnet3"]
+  default     = ["priv-inst-sub", "priv-func-sub", "pub-func-sub", "priv-db-sub", "priv-mgmt-sub"]
 }
 
 variable "subnet_prefixes" {

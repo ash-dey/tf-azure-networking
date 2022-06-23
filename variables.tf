@@ -30,7 +30,7 @@ variable "vnet_location" {
 variable "address_space" {
   type        = list(string)
   description = "The address space that is used by the virtual network."
-#  default     = ["10.0.0.0/16"]
+  #  default     = ["10.0.0.0/16"]
 }
 
 # If no values specified, this defaults to Azure DNS
@@ -43,13 +43,13 @@ variable "dns_servers" {
 variable "subnet_names" {
   description = "A list of public subnets inside the vNet."
   type        = list(string)
-#  default     = ["subnet1", "subnet2", "subnet3"]
+  #  default     = ["subnet1", "subnet2", "subnet3"]
 }
 
 variable "subnet_prefixes" {
   description = "The address prefix to use for the subnet."
   type        = list(string)
-#  default     = ["10.0.1.0/24"]
+  #  default     = ["10.0.1.0/24"]
 }
 
 variable "subnet_service_endpoints" {
@@ -95,9 +95,9 @@ variable "common_tags" {
   type        = map(string)
 
   default = {
-    APP     = "core-network"
-    OWNER   = "ICT"
-    DEPLOY  = "Terraform"
+    APP    = "core-network"
+    OWNER  = "ICT"
+    DEPLOY = "Terraform"
   }
 }
 

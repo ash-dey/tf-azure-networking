@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "vnet" {
 resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_name != null ? var.vnet_name : "${var.resource_group_name}-${var.env}-vnet"
   resource_group_name = azurerm_resource_group.vnet.name
-  location            = var.vnet_location != null ? var.vnet_location : data.azurerm_resource_group.vnet.location
+  location            = var.vnet_location != null ? var.vnet_location : azurerm_resource_group.vnet.location
   address_space       = var.address_space
   dns_servers         = var.dns_servers
   tags                = merge(var.common_tags, var.extra_tags)
